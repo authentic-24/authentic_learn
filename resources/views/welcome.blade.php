@@ -26,7 +26,7 @@
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-4 sticky-top">
             <div class="container">
                 <a class="navbar-brand fw-bold" href="#" style="font-size:1.8rem; letter-spacing:-0.5px; font-family:'Inter',sans-serif;">
-                    Authentic Learn
+                    Authentic E-learning
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -51,27 +51,27 @@
             </div>
         </nav>
 
-        <header class="text-center position-relative" style="background-image: url('/images/fondo.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden;">
+        <header class="text-center position-relative" style="background-image: url('/images/fondo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden;">
             <!-- Overlay para mejorar legibilidad del texto -->
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(1px);"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(1px);"></div>
             
             <div class="position-relative d-flex align-items-center justify-content-center" style="z-index: 2; min-height: 100vh;">
                 <div class="container py-5">
                     <div class="mb-4">
-                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-medium mb-3">
-                            <i class="bi bi-mortarboard me-1"></i>Formación Especializada
+                        <span class="badge bg-primary bg-opacity-25 text-white rounded-pill fw-medium mb-3 badge-custom-large">
+                            <i class="bi bi-mortarboard me-2"></i>Formación Especializada
                         </span>
                     </div>
                     <h1 class="display-5 fw-bold text-white mb-4" style="line-height:1.2;font-family:'Inter',sans-serif;">
-                        Desarrolla tu liderazgo farmacéutico:<br>
-                        <span class="text-white">aprende + conéctate + auténtico</span>
+                        Desarrolla tus comportamientos de liderazgo:<br>
+                        <span class="text-white">Aprende + Conéctate + Sé auténtico</span>
                     </h1>
-                    <p class="lead text-white mb-4 mx-auto" style="max-width:600px;font-size:1.1rem;line-height:1.6;">
+                    {{-- <p class="lead text-white mb-4 mx-auto" style="max-width:600px;font-size:1.1rem;line-height:1.6;">
                         E-learning + comportamientos comportamentales y técnicos
                     </p>
                     <p class="text-white mb-5 mx-auto" style="max-width:700px;font-size:1rem;line-height:1.7;">
                         Capacítate en comunicación, liderazgo, autogestión, adaptabilidad y transformación digital 
-                    </p>
+                    </p> --}}
                     
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
                         <a href="{{ route('register') }}" class="btn btn-pharma btn-lg px-5 py-3">
@@ -96,17 +96,17 @@
                     <div class="col-lg-11">
                         <div class="position-relative">
                             <!-- Fondo decorativo -->
-                            <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.03) 0%, rgba(0,168,107,0.05) 100%);border-radius:16px;"></div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.8);border-radius:16px;"></div>
                             <div class="card border-0 position-relative" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border-radius:16px;overflow:hidden;">
                                 <!-- Header de la sección -->
                                 <div class="card-body text-center py-5 px-4">
                                     <div class="mb-4">
-                                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-medium mb-3">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill fw-medium mb-3 badge-custom-large">
                                             <i class="bi bi-stars me-2"></i>Plataforma Líder
                                         </span>
                                     </div>
                                     <h2 class="h2 fw-bold mb-4" style="font-family:'Inter',sans-serif;letter-spacing:-0.8px;color:#1e293b;">
-                                        ¿Qué es <span class="text-primary">Authentic Farma</span> E-Learning?
+                                        ¿Qué es <span class="text-primary">Authentic</span> E-Learning?
                                     </h2>
                                     <p class="lead text-secondary mb-5 mx-auto" style="max-width:700px;line-height:1.7;font-size:1.1rem;">
                                         Una plataforma formativa diseñada para profesionales, estudiantes y empresas del sector farmacéutico y dispositivos médicos, con contenido de alto impacto, formación especializada y aprendizaje continuo.
@@ -136,7 +136,7 @@
                                                             <i class="bi bi-star-fill text-success" style="font-size:1.5rem;"></i>
                                                         </div>
                                                     </div>
-                                                    <h5 class="fw-bold mb-2" style="color:#1e293b;">Mentores con experiencia real</h5>
+                                                    <h5 class="fw-bold mb-2" style="color:#1e293b;">Mentores con experiencia</h5>
                                                     <p class="text-secondary small mb-0">En la industria farmacéutica y dispositivos médicos</p>
                                                 </div>
                                             </div>
@@ -179,7 +179,7 @@
                                                         </div>
                                                     </div>
                                                     <h5 class="fw-bold mb-2" style="color:#1e293b;">Comunidad de networking</h5>
-                                                    <p class="text-secondary small mb-0">Sectorial especializada en farma y dispositivos médicos</p>
+                                                    <p class="text-secondary small mb-0">Especializada en el sector farma y dispositivos médicos</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -193,14 +193,14 @@
                                                         </div>
                                                     </div>
                                                     <h5 class="fw-bold mb-2" style="color:#1e293b;">Conexión con oportunidades laborales</h5>
-                                                    <p class="text-secondary small mb-0">Acceso directo a ofertas exclusivas del sector farmacéutico</p>
+                                                    <p class="text-secondary small mb-0">Acceso directo a ofertas exclusivas del sector farmacéutico y dispositivos médicos</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <!-- Misión -->
-                                    <div class="mt-5 p-4 rounded-3" style="background:linear-gradient(135deg, rgba(0,87,184,0.05) 0%, rgba(0,168,107,0.08) 100%);">
+                                    <div class="mt-5 p-4 rounded-3" style="background:rgba(248,249,250,0.9);border:1px solid rgba(0,87,184,0.1);">
                                         <div class="d-flex align-items-center justify-content-center mb-3">
                                             <i class="bi bi-target text-primary me-2" style="font-size:1.5rem;"></i>
                                             <h6 class="fw-bold mb-0 text-primary">Nuestro Mantra</h6>
@@ -222,21 +222,21 @@
                     <div class="col-lg-11">
                         <!-- Header profesional -->
                         <div class="text-center mb-5">
-                            <span class="badge bg-info bg-opacity-10 px-4 py-3 rounded-pill fw-large mb-3 fs-4">
+                            <span class="badge bg-info bg-opacity-10 rounded-pill fw-large mb-3 badge-custom-xl">
                                 <i class="bi bi-mortarboard me-2"></i>Programa Formativo
                             </span>
                             <h2 class="h2 fw-bold text-white mb-3" style="font-family:'Inter',sans-serif;letter-spacing:-0.8px;">
                                 ¿Qué vas a <span class="">aprender</span>?
                             </h2>
-                            <p class="lead text-white-50 mx-auto mb-4" style="max-width:700px;line-height:1.6;">
+                            {{-- <p class="lead text-white-50 mx-auto mb-4" style="max-width:700px;line-height:1.6;">
                                 Desarrolla las competencias más demandadas en el sector farmacéutico
-                            </p>
+                            </p> --}}
                         </div>
 
                         <!-- Carrusel mejorado -->
                         <div class="position-relative">
                             <!-- Fondo decorativo del carrusel -->
-                            <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.03) 0%, rgba(0,168,107,0.05) 100%);border-radius:20px;"></div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(255,255,255,0.95);border:1px solid rgba(0,87,184,0.08);border-radius:20px;"></div>
                             
                             <div id="modulosCarousel" class="position-relative" style="padding:2rem;border-radius:20px;">
                                 <!-- Indicadores personalizados -->
@@ -496,8 +496,8 @@
             <section class="mb-6">
                 <div class="text-center mb-5">
                     
-                    <span class="badge bg-info bg-opacity-10 px-4 py-3 rounded-pill fw-large mb-3 fs-4">
-                                <i class="bi bi-stars me-1"></i>Equipo Fundador
+                    <span class="badge bg-info bg-opacity-10 rounded-pill fw-large mb-3 badge-custom-xl">
+                                <i class="bi bi-stars me-2"></i>Equipo Fundador
                             </span>
                     <h2 class="h3 fw-bold text-white mb-3" style="font-family:'Inter',sans-serif;letter-spacing:-0.5px;">
                         Conoce a tus mentores
@@ -510,7 +510,7 @@
                     <!-- Angelica M. Santos R. -->
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
-                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.02) 0%, rgba(0,168,107,0.04) 100%);opacity:0;transition:opacity 0.4s ease;"></div>
+                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);opacity:0;transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
                                 <div class="mb-3">
                                     <div class="mentor-photo-container position-relative d-inline-block">
@@ -527,14 +527,14 @@
                                 <p class="text-secondary small mb-3 lh-base" style="font-size:0.8rem;">
                                     <strong>Psicóloga</strong> + Especialista en Gestión Humana y Desarrollo Organizacional + Coach Ejecutivo + Master
                                 </p>
+                                <p class="text-muted small mb-2 mt-2" style="font-size:0.8rem;">
+                                    Especialista en atracción del talento y transformación digital en RRHH.
+                                </p>
                                 <div class="d-flex align-items-center justify-content-center mb-3">
-                                    <div class="company-logos-container p-3 rounded-3" style="background:rgba(255,255,255,0.8);border:1px solid rgba(0,87,184,0.1);box-shadow:0 2px 15px rgba(0,87,184,0.08);">
-                                        <img src="/images/empresas angelica santos.png" alt="Empresas Angelica Santos" class="img-fluid" style="max-height:85px;max-width:240px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
+                                    <div class="company-logos-container p-3 rounded-3" style="">
+                                        <img src="/images/empresas angelica sin fondo.png" alt="Empresas Angelica Santos" class="img-fluid" style="max-height:145px;max-width:360px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
                                     </div>
                                 </div>
-                                <p class="text-muted small mb-0" style="font-size:0.8rem;">
-                                    Especialista en desarrollo de talento humano especializado en la industria farmacéutica
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -542,7 +542,7 @@
                     <!-- Natalia Vergara -->
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
-                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.02) 0%, rgba(0,168,107,0.04) 100%);opacity:0;transition:opacity 0.4s ease;"></div>
+                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);opacity:0;transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
                                 <div class="mb-3">
                                     <div class="mentor-photo-container position-relative d-inline-block">
@@ -559,14 +559,14 @@
                                 <p class="text-secondary small mb-3 lh-base" style="font-size:0.8rem;">
                                     <strong>Psicóloga</strong> + Especialista en Administración de Empresas
                                 </p>
-                                <div class="d-flex align-items-center justify-content-center mb-3">
-                                    <div class="company-logos-container p-3 rounded-3" style="background:rgba(255,255,255,0.8);border:1px solid rgba(0,87,184,0.1);box-shadow:0 2px 15px rgba(0,87,184,0.08);">
-                                        <img src="/images/empresas natalia vergara.png" alt="Empresas Natalia Vergara" class="img-fluid" style="max-height:120px;max-width:320px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
-                                    </div>
-                                </div>
                                 <p class="text-muted small mb-0" style="font-size:0.8rem;">
                                     Especialista en desarrollo empresarial y coaching profesional
                                 </p>
+                                <div class="d-flex align-items-center justify-content-center mb-3 mt-2">
+                                    <div class="company-logos-container p-3 rounded-3" style="">
+                                        <img src="/images/logos_empresa_nataalia_sin_fondo.png" alt="Empresas Natalia Vergara" class="img-fluid" style="max-height:145px;max-width:360px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -574,7 +574,7 @@
                     <!-- Otoniel Fonseca -->
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
-                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.02) 0%, rgba(0,168,107,0.04) 100%);opacity:0;transition:opacity 0.4s ease;"></div>
+                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);opacity:0;transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
                                 <div class="mb-3">
                                     <div class="mentor-photo-container position-relative d-inline-block">
@@ -591,21 +591,21 @@
                                 <p class="text-secondary small mb-3 lh-base" style="font-size:0.8rem;">
                                     <strong>Ingeniero de Sistemas</strong> + Arquitecto de Software
                                 </p>
-                                <div class="d-flex align-items-center justify-content-center mb-3">
-                                    <div class="company-logos-container p-3 rounded-3" style="background:rgba(255,255,255,0.8);border:1px solid rgba(0,87,184,0.1);box-shadow:0 2px 15px rgba(0,87,184,0.08);">
-                                        <img src="/images/empresas otoniel fonseca.png" alt="Empresas Otoniel" class="img-fluid" style="max-height:85px;max-width:240px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
-                                    </div>
-                                </div>
                                 <p class="text-muted small mb-0" style="font-size:0.8rem;">
                                     Arquitecto de soluciones tecnológicas para plataformas digitales especializadas
                                 </p>
+                                <div class="d-flex align-items-center justify-content-center mb-3 mt-2">
+                                    <div class="company-logos-container p-3 rounded-3" style="">
+                                        <img src="/images/empresas_oto_sin_fondo.png" alt="Empresas Otoniel" class="img-fluid" style="max-height:185px;max-width:380px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
-                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.02) 0%, rgba(0,168,107,0.04) 100%);opacity:0;transition:opacity 0.4s ease;"></div>
+                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);opacity:0;transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
                                 <div class="mb-3">
                                     <div class="mentor-photo-container position-relative d-inline-block">
@@ -615,21 +615,21 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="fw-bold mb-2" style="color:#1e293b;font-size:1.1rem;">Carolina huertas</h5>
+                                <h5 class="fw-bold mb-2" style="color:#1e293b;font-size:1.1rem;">Carolina Huertas</h5>
                                 {{-- <div class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill mb-3 fw-semibold" style="font-size:0.75rem;">
                                     Co-Fundador
                                 </div> --}}
                                 <p class="text-secondary small mb-3 lh-base" style="font-size:0.8rem;">
-                                    <strong>Especialista en Finanzas</strong>
+                                    <strong>Zootecnista + Especialista en Finanzas + Magister en Administración Financiera</strong>
                                 </p>
-                                <div class="d-flex align-items-center justify-content-center mb-3">
-                                    <div class="company-logos-container p-4 rounded-3" style="background:rgba(255,255,255,0.8);border:1px solid rgba(0,87,184,0.1);box-shadow:0 2px 15px rgba(0,87,184,0.08);min-height:140px;">
-                                        <img src="/images/empresas carolina huertas.png" alt="Empresas Carolina Huertas" class="img-fluid" style="max-height:160px;max-width:400px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
+                                <p class="text-muted small mb-0" style="font-size:0.8rem;">
+                                    Liderazgo en modelos de negocios sostenibles
+                                </p>
+                                <div class="d-flex align-items-center justify-content-center mb-3 mt-2">
+                                    <div class="company-logos-container p-4 rounded-3" >
+                                        <img src="/images/empresas_carolina_sin_fondo.png" alt="Empresas Carolina Huertas" class="img-fluid" style="max-height:180px;max-width:420px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
                                     </div>
                                 </div>
-                                <p class="text-muted small mb-0" style="font-size:0.8rem;">
-                                     Magister en Admón Financiera, Liderazgo en modelos de negocios sostenibles
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -711,8 +711,8 @@
                     <div class="col-lg-10">
                         <!-- Header de la sección -->
                         <div class="text-center mb-5">
-                            <span class="badge bg-primary bg-opacity-10  px-3 py-2 rounded-pill fw-medium mb-3">
-                                <i class="bi bi-question-circle me-1"></i>Soporte y Ayuda
+                            <span class="badge bg-primary bg-opacity-10 rounded-pill fw-medium mb-3 badge-custom-large">
+                                <i class="bi bi-question-circle me-2"></i>Soporte y Ayuda
                             </span>
                             <h2 class="h2 fw-bold mb-3 text-white" style="font-family:'Inter',sans-serif;letter-spacing:-0.8px;">
                                 Preguntas <span class="">Frecuentes</span>
@@ -746,7 +746,7 @@
                                             <i class="bi bi-book-fill text-success" style="font-size:1.2rem;"></i>
                                         </div>
                                     </div>
-                                    <h5 class="fw-bold mb-3" style="color:#1e293b;">¿Necesito tener experiencia previa en pharma?</h5>
+                                    <h5 class="fw-bold mb-3" style="color:#1e293b;">¿Necesito tener experiencia previa en sector farmacéutico y dispositivos médicos?</h5>
                                     <p class="text-secondary mb-0" style="line-height:1.6;">
                                         No, los contenidos están diseñados para todos los niveles, desde estudiantes hasta profesionales con experiencia.
                                     </p>
@@ -760,9 +760,9 @@
                                             <i class="bi bi-key text-info" style="font-size:1.2rem;"></i>
                                         </div>
                                     </div>
-                                    <h5 class="fw-bold mb-3" style="color:#1e293b;">¿Cómo accedo a la plataforma Authentic Farma?</h5>
+                                    <h5 class="fw-bold mb-3" style="color:#1e293b;">¿Cómo accedo a la plataforma Authentic E-learning?</h5>
                                     <p class="text-secondary mb-0" style="line-height:1.6;">
-                                        Al registrarte, recibirás acceso automático directo y soporte personalizado para comenzar inmediatamente.
+                                        Al registrarte, recibirás acceso automático directo y soporte personalizado para comenzar inmediatamente. La plataforma estará abierta después del 15 de octubre de 2025.
                                     </p>
                                 </div>
                             </div>
@@ -776,7 +776,7 @@
                                     </div>
                                     <h5 class="fw-bold mb-3" style="color:#1e293b;">Soporte / contacto técnico</h5>
                                     <p class="text-secondary mb-0" style="line-height:1.6;">
-                                        Puedes contactarnos en cualquier momento a través de WhatsApp para soporte inmediato.
+                                        Puedes contactarnos en cualquier momento a través de WhatsApp para soporte y te responderemos en las 24 horas siguientes.
                                     </p>
                                 </div>
                             </div>
@@ -813,7 +813,7 @@
             </section>
         </div>
 
-        <a href="https://wa.me/573334001541" target="_blank" class="position-fixed" style="bottom:30px;right:30px;z-index:9999;text-decoration:none;">
+        <a href="https://wa.me/573334002303" target="_blank" class="position-fixed" style="bottom:30px;right:30px;z-index:9999;text-decoration:none;">
             <span class="d-flex align-items-center justify-content-center bg-success text-white rounded-circle shadow-lg" style="width:60px;height:60px;font-size:2rem;">
                 <i class="bi bi-whatsapp"></i>
             </span>
@@ -821,7 +821,7 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-        <footer class="border-0 mt-5 pt-5 pb-4" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%);">
+        <footer class="border-0 mt-5 pt-5 pb-4" style="background: #2d3748;">
             <div class="container">
                 <div class="row justify-content-between align-items-start">
                     <div class="col-md-4 mb-4">
@@ -849,7 +849,7 @@
                         <!-- Logos del patrocinio -->
                         <div class="mt-4 d-flex gap-3 align-items-center">
                             <img src="/images/patrocinio-logo.png" alt="Patrocinio" class="img-fluid opacity-75" style="max-height:40px;max-width:120px;object-fit:contain;">
-                            <img src="/images/patrocinio-logo2.png" alt="Patrocinio 2" class="img-fluid opacity-75" style="max-height:80px;max-width:250px;object-fit:contain;">
+                            <img src="/images/logo-authenticfarma-white.png" alt="Patrocinio 2" class="img-fluid opacity-75" style="max-height:80px;max-width:220px;object-fit:contain;">
                         </div>
                     </div>
                     <div class="col-md-2 mb-4">
@@ -903,13 +903,13 @@
                         <div class="text-white-50 small mb-2 d-flex align-items-center">
                             <i class="bi bi-envelope me-2 text-primary"></i>
                             <a href="mailto:info@authenticfarma.com" class="text-white-50 text-decoration-none hover-text-white" style="transition:color 0.3s ease;">
-                                consultor@authentic.com.co
+                                administrativo@authentic.com.co
                             </a>
                         </div>
                         <div class="text-white-50 small mb-3 d-flex align-items-center">
                             <i class="bi bi-whatsapp me-2 text-success"></i>
                             <a href="https://wa.me/573334001541" target="_blank" class="text-white-50 text-decoration-none hover-text-white" style="transition:color 0.3s ease;">
-                                +57 333 400 1541
+                                +57 333 4002303
                             </a>
                         </div>
                         <div class="text-white-50 small d-flex align-items-center">
@@ -1146,6 +1146,19 @@
         <style>
             .toastify {
                 z-index: 99999 !important;
+            }
+            
+            /* Estilos personalizados para badges principales */
+            .badge-custom-large {
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+                padding: 12px 20px !important;
+            }
+            
+            .badge-custom-xl {
+                font-size: 1.2rem !important;
+                font-weight: 600 !important;
+                padding: 14px 24px !important;
             }
             
             /* Estilos personalizados para carrusel */

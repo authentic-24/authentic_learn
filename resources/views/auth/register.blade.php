@@ -327,10 +327,10 @@
                                 y 
                                 <a href="{{ route('policies-data.index') }}" class="text-primary text-decoration-none" target="_blank">política de privacidad</a>
                             </p>
-                            <p class="text-secondary small">
+                            {{-- <p class="text-secondary small">
                                 ¿Ya tienes una cuenta? 
                                 <a href="#" class="text-primary text-decoration-none fw-medium">Iniciar sesión</a>
-                            </p>
+                            </p> --}}
                         </div>
                     </form>
                 </div>
