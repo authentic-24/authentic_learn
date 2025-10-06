@@ -19,11 +19,10 @@
     </head>
 
     <body class="bg-light position-relative" style="overflow-x:hidden;">
-        <!-- Fondo animado de partículas y gradiente -->
+
         <div id="bg-animated-gradient"></div>
         <canvas id="bg-particles"></canvas>
-            <!-- ...existing code... -->
-            <!-- Barra de navegación superior futurista -->
+
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-4 sticky-top">
             <div class="container">
                 <a class="navbar-brand fw-bold" href="#" style="font-size:1.8rem; letter-spacing:-0.5px; font-family:'Inter',sans-serif;">
@@ -51,7 +50,7 @@
                 </div>
             </div>
         </nav>
-            <!-- Encabezado principal con fondo full-screen -->
+
         <header class="text-center position-relative" style="background-image: url('/images/fondo.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden;">
             <!-- Overlay para mejorar legibilidad del texto -->
             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(1px);"></div>
@@ -239,17 +238,25 @@
                             <!-- Fondo decorativo del carrusel -->
                             <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.03) 0%, rgba(0,168,107,0.05) 100%);border-radius:20px;"></div>
                             
-                            <div id="modulosCarousel" class="carousel slide position-relative" data-bs-ride="carousel" style="padding:2rem;border-radius:20px;">
+                            <div id="modulosCarousel" class="position-relative" style="padding:2rem;border-radius:20px;">
                                 <!-- Indicadores personalizados -->
                                 <div class="carousel-indicators position-relative mb-4" style="position:relative;margin-bottom:0;">
-                                    <button type="button" data-bs-target="#modulosCarousel" data-bs-slide-to="0" class="active carousel-indicator-custom" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#modulosCarousel" data-bs-slide-to="1" class="carousel-indicator-custom" aria-label="Slide 2"></button>
+                                    <!-- Desktop: 2 slides -->
+                                    <button type="button" class="carousel-indicator-custom d-none d-md-block active" data-slide="0" aria-label="Slide 1"></button>
+                                    <button type="button" class="carousel-indicator-custom d-none d-md-block" data-slide="1" aria-label="Slide 2"></button>
+                                    
+                                    <!-- Móvil: 5 slides -->
+                                    <button type="button" class="carousel-indicator-custom d-block d-md-none active" data-slide="0" aria-label="Comunicación"></button>
+                                    <button type="button" class="carousel-indicator-custom d-block d-md-none" data-slide="1" aria-label="Liderazgo"></button>
+                                    <button type="button" class="carousel-indicator-custom d-block d-md-none" data-slide="2" aria-label="Autogestión"></button>
+                                    <button type="button" class="carousel-indicator-custom d-block d-md-none" data-slide="3" aria-label="Adaptabilidad"></button>
+                                    <button type="button" class="carousel-indicator-custom d-block d-md-none" data-slide="4" aria-label="Transformación Digital"></button>
                                 </div>
 
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="row justify-content-center g-4">
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 d-none d-md-block">
                                                 <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
                                                     <div class="card-body text-center p-4">
                                                         <div class="mb-3">
@@ -259,16 +266,15 @@
                                                         </div>
                                                         <h5 class="card-title fw-bold text-primary mb-3">Comunicación</h5>
                                                         <ul class="mb-3 text-start" style="list-style:none;padding:0;">
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Comunicación en equipos multiculturales</li>
                                                             <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Escucha activa</li>
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Comunicación efectiva</li>
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Negociación</li>
-                                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Retroalimentación</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Feedback constructivo</li>
+                                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Fortalecer confianza</li>
                                                         </ul>
-                                                        <div class="text-secondary small">Capacidad de expresarte claramente y persuadir en equipo</div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 d-none d-md-block">
                                                 <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
                                                     <div class="card-body text-center p-4">
                                                         <div class="mb-3">
@@ -278,16 +284,16 @@
                                                         </div>
                                                         <h5 class="card-title fw-bold text-primary mb-3">Liderazgo</h5>
                                                         <ul class="mb-3 text-start" style="list-style:none;padding:0;">
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Liderazgo situacional</li>
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Motivación</li>
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Gestión de equipos</li>
-                                                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Coaching básico</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Inteligencia emocional</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>autoconciencia</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>equipos colaborativos</li>
+                                                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Generar propósito</li>
                                                         </ul>
                                                         <div class="text-secondary small">Potenciar liderazgo individual y de equipo</div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 d-none d-md-block">
                                                 <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
                                                     <div class="card-body text-center p-4">
                                                         <div class="mb-3">
@@ -299,10 +305,29 @@
                                                         <ul class="mb-3 text-start" style="list-style:none;padding:0;">
                                                             <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Gestión del tiempo</li>
                                                             <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Productividad</li>
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Resiliencia</li>
-                                                            <li><i class="bi bi-check-circle-fill text-info me-2"></i>Hábitos</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Autonomía profesional</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Toma de decisiones</li>
                                                         </ul>
                                                         <div class="text-secondary small">Capacidad de autoorganización y manejo del estrés</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Cards móviles -->
+                                            <div class="col-12 d-block d-md-none">
+                                                <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
+                                                    <div class="card-body text-center p-4">
+                                                        <div class="mb-3">
+                                                            <div class="icon-container d-inline-flex align-items-center justify-content-center rounded-circle  bg-opacity-15 mb-3" style="width:70px;height:70px;">
+                                                                <i class="bi bi-chat-dots" style="font-size:2.5rem;color:#00a86b;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="card-title fw-bold text-primary mb-3">Comunicación</h5>
+                                                        <ul class="mb-3 text-start" style="list-style:none;padding:0;">
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Comunicación en equipos multiculturales</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Escucha activa</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Feedback constructivo</li>
+                                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Fortalecer confianza</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -310,7 +335,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="row justify-content-center g-4">
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 d-none d-md-block">
                                                 <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
                                                     <div class="card-body text-center p-4">
                                                         <div class="mb-3">
@@ -320,16 +345,16 @@
                                                         </div>
                                                         <h5 class="card-title fw-bold text-primary mb-3">Adaptabilidad</h5>
                                                         <ul class="mb-3 text-start" style="list-style:none;padding:0;">
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Flexibilidad</li>
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Innovación</li>
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Cambio</li>
-                                                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Mindset</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Pensamiento flexible</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Resolución creativa</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Aprendizaje ágil</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Romper paradigmas</li>
                                                         </ul>
                                                         <div class="text-secondary small">Afrontar retos dinámicos con agilidad</div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 d-none d-md-block">
                                                 <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
                                                     <div class="card-body text-center p-4">
                                                         <div class="mb-3">
@@ -339,10 +364,100 @@
                                                         </div>
                                                         <h5 class="card-title fw-bold text-primary mb-3">Transformación digital</h5>
                                                         <ul class="mb-3 text-start" style="list-style:none;padding:0;">
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Herramientas digitales</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mindset tecnológico</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Herramientas colaborativas</li>
                                                             <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Innovación</li>
-                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Datos</li>
-                                                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Automatización</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Automatización</li>
+                                                        </ul>
+                                                        <div class="text-secondary small">Entender herramientas emergentes del sector salud / farma</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Cards móviles - Liderazgo -->
+                                            <div class="col-12 d-block d-md-none">
+                                                <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
+                                                    <div class="card-body text-center p-4">
+                                                        <div class="mb-3">
+                                                            <div class="icon-container d-inline-flex align-items-center justify-content-center rounded-circle  bg-opacity-15 mb-3" style="width:70px;height:70px;">
+                                                                <i class="bi bi-trophy-fill" style="font-size:2.5rem;color:#0057b8;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="card-title fw-bold text-primary mb-3">Liderazgo</h5>
+                                                        <ul class="mb-3 text-start" style="list-style:none;padding:0;">
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Inteligencia emocional</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>autoconciencia</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>equipos colaborativos</li>
+                                                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Generar propósito</li>
+                                                        </ul>
+                                                        <div class="text-secondary small">Potenciar liderazgo individual y de equipo</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Slides adicionales solo para móvil -->
+                                    <div class="carousel-item d-block d-md-none">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
+                                                    <div class="card-body text-center p-4">
+                                                        <div class="mb-3">
+                                                            <div class="icon-container d-inline-flex align-items-center justify-content-center rounded-circle bg-opacity-15 mb-3" style="width:70px;height:70px;">
+                                                                <i class="bi bi-gear-fill" style="font-size:2.5rem;color:#00a86b;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="card-title fw-bold text-primary mb-3">Autogestión</h5>
+                                                        <ul class="mb-3 text-start" style="list-style:none;padding:0;">
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Gestión del tiempo</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Productividad</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Autonomía profesional</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-info me-2"></i>Toma de decisiones</li>
+                                                        </ul>
+                                                        <div class="text-secondary small">Capacidad de autoorganización y manejo del estrés</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item d-block d-md-none">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
+                                                    <div class="card-body text-center p-4">
+                                                        <div class="mb-3">
+                                                            <div class="icon-container d-inline-flex align-items-center justify-content-center rounded-circle  bg-opacity-15 mb-3" style="width:70px;height:70px;">
+                                                                <i class="bi bi-lightbulb" style="font-size:2.5rem;color:#0057b8;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="card-title fw-bold text-primary mb-3">Adaptabilidad</h5>
+                                                        <ul class="mb-3 text-start" style="list-style:none;padding:0;">
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Pensamiento flexible</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Resolución creativa</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Aprendizaje ágil</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Romper paradigmas</li>
+                                                        </ul>
+                                                        <div class="text-secondary small">Afrontar retos dinámicos con agilidad</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item d-block d-md-none">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="card border-0 shadow-lg rounded-4 h-100 mx-auto card-hover-effect" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);">
+                                                    <div class="card-body text-center p-4">
+                                                        <div class="mb-3">
+                                                            <div class="icon-container d-inline-flex align-items-center justify-content-center rounded-circle bg-opacity-15 mb-3" style="width:70px;height:70px;">
+                                                                <i class="bi bi-cpu" style="font-size:2.5rem;color:#00a86b;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <h5 class="card-title fw-bold text-primary mb-3">Transformación digital</h5>
+                                                        <ul class="mb-3 text-start" style="list-style:none;padding:0;">
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mindset tecnológico</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Herramientas colaborativas</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Innovación</li>
+                                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Automatización</li>
                                                         </ul>
                                                         <div class="text-secondary small">Entender herramientas emergentes del sector salud / farma</div>
                                                     </div>
@@ -353,13 +468,13 @@
                                 </div>
                                 
                                 <!-- Controles personalizados -->
-                                <button class="carousel-control-prev carousel-control-custom" type="button" data-bs-target="#modulosCarousel" data-bs-slide="prev">
+                                <button class="carousel-control-prev carousel-control-custom" type="button">
                                     <div class="carousel-control-icon">
                                         <i class="bi bi-chevron-left"></i>
                                     </div>
                                     <span class="visually-hidden">Anterior</span>
                                 </button>
-                                <button class="carousel-control-next carousel-control-custom" type="button" data-bs-target="#modulosCarousel" data-bs-slide="next">
+                                <button class="carousel-control-next carousel-control-custom" type="button">
                                     <div class="carousel-control-icon">
                                         <i class="bi bi-chevron-right"></i>
                                     </div>
@@ -393,7 +508,7 @@
                 </div>
                 <div class="row justify-content-center g-4">
                     <!-- Angelica M. Santos R. -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
                             <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.02) 0%, rgba(0,168,107,0.04) 100%);opacity:0;transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
@@ -401,7 +516,7 @@
                                     <div class="mentor-photo-container position-relative d-inline-block">
                                         <img src="/images/Mentora Angelica Santos .png" alt="Angelica M. Santos R." class="mentor-photo rounded-circle border border-primary border-opacity-20" style="width:100px;height:100px;object-fit:cover;transition:all 0.3s ease;">
                                         <div class="photo-overlay position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(0,87,184,0.1);opacity:0;transition:opacity 0.3s ease;">
-                                            <i class="bi bi-award text-primary" style="font-size:1.5rem;"></i>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -413,9 +528,8 @@
                                     <strong>Psicóloga</strong> + Especialista en Gestión Humana y Desarrollo Organizacional + Coach Ejecutivo + Master
                                 </p>
                                 <div class="d-flex align-items-center justify-content-center mb-3">
-                                    <div class="experience-badge bg-success bg-opacity-10 border border-success border-opacity-20 rounded-pill px-2 py-1" style="font-size:0.75rem;">
-                                        <i class="bi bi-award me-1 text-success" style="font-size:0.8rem;"></i>
-                                        <span class="fw-bold text-success">+15 años</span>
+                                    <div class="company-logos-container p-3 rounded-3" style="background:rgba(255,255,255,0.8);border:1px solid rgba(0,87,184,0.1);box-shadow:0 2px 15px rgba(0,87,184,0.08);">
+                                        <img src="/images/empresas angelica santos.png" alt="Empresas Angelica Santos" class="img-fluid" style="max-height:85px;max-width:240px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
                                     </div>
                                 </div>
                                 <p class="text-muted small mb-0" style="font-size:0.8rem;">
@@ -426,7 +540,7 @@
                     </div>
 
                     <!-- Natalia Vergara -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
                             <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.02) 0%, rgba(0,168,107,0.04) 100%);opacity:0;transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
@@ -446,9 +560,8 @@
                                     <strong>Psicóloga</strong> + Especialista en Administración de Empresas
                                 </p>
                                 <div class="d-flex align-items-center justify-content-center mb-3">
-                                    <div class="specialization-badge bg-primary bg-opacity-10 border border-primary border-opacity-20 rounded-pill px-2 py-1" style="font-size:0.75rem;">
-                                        <i class="bi bi-brain me-1 text-primary" style="font-size:0.8rem;"></i>
-                                        <span class="fw-bold text-primary">Coaching</span>
+                                    <div class="company-logos-container p-3 rounded-3" style="background:rgba(255,255,255,0.8);border:1px solid rgba(0,87,184,0.1);box-shadow:0 2px 15px rgba(0,87,184,0.08);">
+                                        <img src="/images/empresas natalia vergara.png" alt="Empresas Natalia Vergara" class="img-fluid" style="max-height:120px;max-width:320px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
                                     </div>
                                 </div>
                                 <p class="text-muted small mb-0" style="font-size:0.8rem;">
@@ -459,7 +572,7 @@
                     </div>
 
                     <!-- Otoniel Fonseca -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
                             <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.02) 0%, rgba(0,168,107,0.04) 100%);opacity:0;transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
@@ -467,7 +580,7 @@
                                     <div class="mentor-photo-container position-relative d-inline-block">
                                         <img src="/images/mentor Otoniel Fonseca.png" alt="Otoniel Fonseca" class="mentor-photo rounded-circle border border-info border-opacity-20" style="width:100px;height:100px;object-fit:cover;transition:all 0.3s ease;">
                                         <div class="photo-overlay position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(13,202,240,0.1);opacity:0;transition:opacity 0.3s ease;">
-                                            <i class="bi bi-code-slash text-info" style="font-size:1.5rem;"></i>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -479,13 +592,43 @@
                                     <strong>Ingeniero de Sistemas</strong> + Arquitecto de Software
                                 </p>
                                 <div class="d-flex align-items-center justify-content-center mb-3">
-                                    <div class="tech-badge bg-info bg-opacity-10 border border-info border-opacity-20 rounded-pill px-2 py-1" style="font-size:0.75rem;">
-                                        <i class="bi bi-code-slash me-1 text-info" style="font-size:0.8rem;"></i>
-                                        <span class="fw-bold text-info">Tech Lead</span>
+                                    <div class="company-logos-container p-3 rounded-3" style="background:rgba(255,255,255,0.8);border:1px solid rgba(0,87,184,0.1);box-shadow:0 2px 15px rgba(0,87,184,0.08);">
+                                        <img src="/images/empresas otoniel fonseca.png" alt="Empresas Otoniel" class="img-fluid" style="max-height:85px;max-width:240px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
                                     </div>
                                 </div>
                                 <p class="text-muted small mb-0" style="font-size:0.8rem;">
                                     Arquitecto de soluciones tecnológicas para plataformas digitales especializadas
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
+                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(135deg, rgba(0,87,184,0.02) 0%, rgba(0,168,107,0.04) 100%);opacity:0;transition:opacity 0.4s ease;"></div>
+                            <div class="position-relative z-1">
+                                <div class="mb-3">
+                                    <div class="mentor-photo-container position-relative d-inline-block">
+                                        <img src="/images/mentora Carolina huertas.png" alt="Otoniel Fonseca" class="mentor-photo rounded-circle border border-info border-opacity-20" style="width:100px;height:100px;object-fit:cover;transition:all 0.3s ease;">
+                                        <div class="photo-overlay position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(13,202,240,0.1);opacity:0;transition:opacity 0.3s ease;">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <h5 class="fw-bold mb-2" style="color:#1e293b;font-size:1.1rem;">Carolina huertas</h5>
+                                {{-- <div class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill mb-3 fw-semibold" style="font-size:0.75rem;">
+                                    Co-Fundador
+                                </div> --}}
+                                <p class="text-secondary small mb-3 lh-base" style="font-size:0.8rem;">
+                                    <strong>Especialista en Finanzas</strong>
+                                </p>
+                                <div class="d-flex align-items-center justify-content-center mb-3">
+                                    <div class="company-logos-container p-4 rounded-3" style="background:rgba(255,255,255,0.8);border:1px solid rgba(0,87,184,0.1);box-shadow:0 2px 15px rgba(0,87,184,0.08);min-height:140px;">
+                                        <img src="/images/empresas carolina huertas.png" alt="Empresas Carolina Huertas" class="img-fluid" style="max-height:160px;max-width:400px;object-fit:contain;filter:brightness(1.1) contrast(1.05);">
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-0" style="font-size:0.8rem;">
+                                     Magister en Admón Financiera, Liderazgo en modelos de negocios sostenibles
                                 </p>
                             </div>
                         </div>
@@ -670,7 +813,6 @@
             </section>
         </div>
 
-        <!-- WhatsApp Floating Button -->
         <a href="https://wa.me/573334001541" target="_blank" class="position-fixed" style="bottom:30px;right:30px;z-index:9999;text-decoration:none;">
             <span class="d-flex align-items-center justify-content-center bg-success text-white rounded-circle shadow-lg" style="width:60px;height:60px;font-size:2rem;">
                 <i class="bi bi-whatsapp"></i>
@@ -679,7 +821,6 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-            <!-- Footer profesional con fondo oscuro -->
         <footer class="border-0 mt-5 pt-5 pb-4" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%);">
             <div class="container">
                 <div class="row justify-content-between align-items-start">
@@ -691,18 +832,24 @@
                             Transformando el reclutamiento en la industria farmacéutica con formación especializada y conexiones laborales.
                         </p>
                         <div class="d-flex gap-3">
-                            <a href="#" class="text-white-50 hover-text-primary transition-all" style="font-size:1.3rem;transition:color 0.3s ease;">
+                            <a href="https://co.linkedin.com/company/authenticfarma" class="text-white-50 hover-text-primary transition-all" style="font-size:1.3rem;transition:color 0.3s ease;">
                                 <i class="bi bi-linkedin"></i>
                             </a>
-                            <a href="#" class="text-white-50 hover-text-primary transition-all" style="font-size:1.3rem;transition:color 0.3s ease;">
+                            {{-- <a href="#" class="text-white-50 hover-text-primary transition-all" style="font-size:1.3rem;transition:color 0.3s ease;">
                                 <i class="bi bi-twitter"></i>
-                            </a>
-                            <a href="#" class="text-white-50 hover-text-primary transition-all" style="font-size:1.3rem;transition:color 0.3s ease;">
+                            </a> --}}
+                            <a href="https://www.instagram.com/authentic_farma/" class="text-white-50 hover-text-primary transition-all" style="font-size:1.3rem;transition:color 0.3s ease;">
                                 <i class="bi bi-instagram"></i>
                             </a>
                             <a href="https://wa.me/573334001541" target="_blank" class="text-white-50 hover-text-success transition-all" style="font-size:1.3rem;transition:color 0.3s ease;">
                                 <i class="bi bi-whatsapp"></i>
                             </a>
+                        </div>
+                        
+                        <!-- Logos del patrocinio -->
+                        <div class="mt-4 d-flex gap-3 align-items-center">
+                            <img src="/images/patrocinio-logo.png" alt="Patrocinio" class="img-fluid opacity-75" style="max-height:40px;max-width:120px;object-fit:contain;">
+                            <img src="/images/patrocinio-logo2.png" alt="Patrocinio 2" class="img-fluid opacity-75" style="max-height:80px;max-width:250px;object-fit:contain;">
                         </div>
                     </div>
                     <div class="col-md-2 mb-4">
@@ -742,11 +889,11 @@
                                     <i class="bi bi-arrow-right me-2"></i>Contacto
                                 </a>
                             </li>
-                            <li class="mb-2">
+                            {{-- <li class="mb-2">
                                 <a href="#" class="text-white-50 text-decoration-none small hover-text-white" style="transition:color 0.3s ease;">
                                     <i class="bi bi-arrow-right me-2"></i>Blog
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                     <div class="col-md-3 mb-4">
@@ -756,7 +903,7 @@
                         <div class="text-white-50 small mb-2 d-flex align-items-center">
                             <i class="bi bi-envelope me-2 text-primary"></i>
                             <a href="mailto:info@authenticfarma.com" class="text-white-50 text-decoration-none hover-text-white" style="transition:color 0.3s ease;">
-                                info@authenticfarma.com
+                                consultor@authentic.com.co
                             </a>
                         </div>
                         <div class="text-white-50 small mb-3 d-flex align-items-center">
@@ -780,10 +927,10 @@
                         </div>
                     </div>
                     <div class="col-md-6 text-md-end">
-                        <a href="#" class="text-white-50 text-decoration-none small me-3 hover-text-white" style="transition:color 0.3s ease;">
+                        <a href="{{ route('policies-data.index') }}" class="text-white-50 text-decoration-none small me-3 hover-text-white" style="transition:color 0.3s ease;">
                             <i class="bi bi-shield-check me-1"></i>Política de Privacidad
                         </a>
-                        <a href="#" class="text-white-50 text-decoration-none small hover-text-white" style="transition:color 0.3s ease;">
+                        <a href="{{ route('policies-data.index') }}" class="text-white-50 text-decoration-none small hover-text-white" style="transition:color 0.3s ease;">
                             <i class="bi bi-file-text me-1"></i>Términos de Uso
                         </a>
                     </div>
@@ -791,19 +938,273 @@
             </div>
         </footer>
 
-
-        <!-- Bootstrap 5.3.8 JS Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
         <script src="/js/custom.js"></script>
         
-        <!-- Toastify JS -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('#modulosCarousel');
+            const carouselInner = carousel.querySelector('.carousel-inner');
+            const allSlides = carousel.querySelectorAll('.carousel-item');
+            let currentSlide = 0;
+            let autoPlayInterval;
+            let isAutoPlaying = true;
+            
+            console.log('Carousel initialized. Total slides:', allSlides.length);
+            
+            function isMobile() {
+                return window.innerWidth < 768;
+            }
+            
+            function showSlide(slideIndex) {
+                console.log('Showing slide:', slideIndex, 'Mobile:', isMobile());
+                
+                // Ocultar todos los slides
+                allSlides.forEach((slide, index) => {
+                    slide.classList.remove('active');
+                    slide.style.display = 'none';
+                });
+                
+                // Mostrar el slide apropiado según el dispositivo
+                if (isMobile()) {
+                    // En móvil: mostrar slides 0-4 (los 5 slides)
+                    if (slideIndex >= 0 && slideIndex < allSlides.length) {
+                        const targetSlide = allSlides[slideIndex];
+                        targetSlide.style.display = 'block';
+                        targetSlide.classList.add('active');
+                        
+                        // Asegurar que las clases responsive estén correctas para móvil
+                        targetSlide.classList.remove('d-none');
+                        targetSlide.classList.add('d-block');
+                        
+                        currentSlide = slideIndex;
+                        console.log('Mobile slide shown:', slideIndex);
+                    }
+                } else {
+                    // En desktop: mostrar solo slides 0-1 (los primeros 2 slides con múltiples cards)
+                    if (slideIndex >= 0 && slideIndex < 2) {
+                        const targetSlide = allSlides[slideIndex];
+                        targetSlide.style.display = 'block';
+                        targetSlide.classList.add('active');
+                        currentSlide = slideIndex;
+                        console.log('Desktop slide shown:', slideIndex);
+                    }
+                }
+                
+                updateIndicators(currentSlide);
+            }
+            
+            function updateIndicators(activeIndex) {
+                const indicators = carousel.querySelectorAll('.carousel-indicator-custom');
+                indicators.forEach((indicator) => {
+                    const slideIndex = parseInt(indicator.getAttribute('data-slide'));
+                    indicator.classList.remove('active');
+                    
+                    if (isMobile()) {
+                        // En móvil, activar indicadores móviles
+                        if (indicator.classList.contains('d-block') && slideIndex === activeIndex) {
+                            indicator.classList.add('active');
+                        }
+                    } else {
+                        // En desktop, activar indicadores desktop
+                        if (indicator.classList.contains('d-none') && slideIndex === activeIndex) {
+                            indicator.classList.add('active');
+                        }
+                    }
+                });
+            }
+            
+            // Función para manejar el cambio de slide
+            function handleSlideChange(direction) {
+                const maxSlides = isMobile() ? allSlides.length : 2;
+                console.log('Handle slide change:', direction, 'Current:', currentSlide, 'Max:', maxSlides);
+                
+                if (direction === 'next') {
+                    currentSlide = (currentSlide + 1) % maxSlides;
+                } else {
+                    currentSlide = (currentSlide - 1 + maxSlides) % maxSlides;
+                }
+                
+                console.log('New slide index:', currentSlide);
+                showSlide(currentSlide);
+            }
+            
+            // Función para iniciar el auto-play
+            function startAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                }
+                
+                autoPlayInterval = setInterval(function() {
+                    if (isAutoPlaying) {
+                        handleSlideChange('next');
+                    }
+                }, 8000); // Cambia cada 8 segundos
+            }
+            
+            // Función para pausar el auto-play
+            function pauseAutoPlay() {
+                isAutoPlaying = false;
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                }
+            }
+            
+            // Función para reanudar el auto-play
+            function resumeAutoPlay() {
+                isAutoPlaying = true;
+                startAutoPlay();
+            }
+            
+            // Manejar clicks en los controles
+            const nextBtn = carousel.querySelector('.carousel-control-next');
+            const prevBtn = carousel.querySelector('.carousel-control-prev');
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Next button clicked');
+                    pauseAutoPlay(); // Pausar auto-play cuando el usuario interactúa
+                    handleSlideChange('next');
+                    setTimeout(resumeAutoPlay, 6000); // Reanudar después de 6 segundos
+                });
+            }
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Prev button clicked');
+                    pauseAutoPlay(); // Pausar auto-play cuando el usuario interactúa
+                    handleSlideChange('prev');
+                    setTimeout(resumeAutoPlay, 6000); // Reanudar después de 6 segundos
+                });
+            }
+            
+            // Manejar clicks en los indicadores
+            const indicators = carousel.querySelectorAll('.carousel-indicator-custom');
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    console.log('Indicator clicked:', slideIndex);
+                    pauseAutoPlay(); // Pausar auto-play cuando el usuario interactúa
+                    showSlide(slideIndex);
+                    setTimeout(resumeAutoPlay, 6000); // Reanudar después de 6 segundos
+                });
+            });
+            
+            // Inicializar carrusel
+            function initCarousel() {
+                console.log('Initializing carousel');
+                currentSlide = 0;
+                showSlide(0);
+                startAutoPlay(); // Iniciar auto-play
+            }
+            
+            // Pausar auto-play cuando el mouse está sobre el carrusel
+            carousel.addEventListener('mouseenter', function() {
+                pauseAutoPlay();
+            });
+            
+            // Reanudar auto-play cuando el mouse sale del carrusel
+            carousel.addEventListener('mouseleave', function() {
+                resumeAutoPlay();
+            });
+            
+            // Pausar auto-play cuando la página no está visible
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    pauseAutoPlay();
+                } else {
+                    resumeAutoPlay();
+                }
+            });
+            
+            // Reinicializar cuando cambie el tamaño de pantalla
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    console.log('Window resized, reinitializing');
+                    pauseAutoPlay();
+                    initCarousel();
+                }, 250);
+            });
+            
+            // Inicializar
+            initCarousel();
+        });
+        </script>
+        
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         
-        <!-- Toast Messages -->
         <style>
             .toastify {
                 z-index: 99999 !important;
+            }
+            
+            /* Estilos personalizados para carrusel */
+            .carousel-inner {
+                position: relative;
+            }
+            
+            .carousel-item {
+                display: none !important;
+                position: relative;
+                backface-visibility: hidden;
+            }
+            
+            .carousel-item.active {
+                display: block !important;
+            }
+            
+            .carousel-control-custom {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 50px;
+                border: none;
+                background: rgba(0, 87, 184, 0.1);
+                border-radius: 50%;
+                color: #0057b8;
+                font-size: 1.2rem;
+                z-index: 10;
+                transition: all 0.3s ease;
+            }
+            
+            .carousel-control-custom:hover {
+                background: rgba(0, 87, 184, 0.2);
+                transform: translateY(-50%) scale(1.1);
+            }
+            
+            .carousel-control-prev {
+                left: -25px;
+            }
+            
+            .carousel-control-next {
+                right: -25px;
+            }
+            
+            .carousel-indicator-custom {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: none;
+                background: rgba(0, 87, 184, 0.3);
+                margin: 0 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            
+            .carousel-indicator-custom.active {
+                background: #0057b8;
+                transform: scale(1.2);
             }
         </style>
         
