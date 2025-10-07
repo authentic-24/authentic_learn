@@ -34,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
                         <li class="nav-item">
-                            <a class="nav-link text-dark fw-medium position-relative" href="#" style="font-size:0.95rem;">
+                            <a class="nav-link text-dark fw-medium position-relative" href="#" id="btnAcceder" style="font-size:0.95rem;">
                                 Acceder
                             </a>
                         </li>
@@ -51,11 +51,11 @@
             </div>
         </nav>
 
-        <header class="text-center position-relative" style="background-image: url('/images/fondo.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden;">
+        <header class="text-center position-relative" style="background-image: url('/images/fondo.png'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat; min-height: 120vh; width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden;">
             <!-- Overlay para mejorar legibilidad del texto -->
             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(1px);"></div>
             
-            <div class="position-relative d-flex align-items-center justify-content-center" style="z-index: 2; min-height: 100vh;">
+            <div class="position-relative d-flex align-items-center justify-content-center" style="z-index: 2; min-height: 120vh; padding: 80px 0;">
                 <div class="container py-5">
                     <div class="mb-4">
                         <span class="badge bg-primary bg-opacity-25 text-white rounded-pill fw-medium mb-3 badge-custom-large">
@@ -236,7 +236,7 @@
                         <!-- Carrusel mejorado -->
                         <div class="position-relative">
                             <!-- Fondo decorativo del carrusel -->
-                            <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(255,255,255,0.95);border:1px solid rgba(0,87,184,0.08);border-radius:20px;"></div>
+                            <div class="position-absolute top-0 start-0 w-100 h-100"></div>
                             
                             <div id="modulosCarousel" class="position-relative" style="padding:2rem;border-radius:20px;">
                                 <!-- Indicadores personalizados -->
@@ -502,20 +502,20 @@
                     <h2 class="h3 fw-bold text-white mb-3" style="font-family:'Inter',sans-serif;letter-spacing:-0.5px;">
                         Conoce a tus mentores
                     </h2>
-                    <p class="text-white-50 mx-auto" style="max-width:600px;">
-                        Co-fundadoras con amplia experiencia liderando la transformación del talento en el sector farmacéutico
+                    <p class="text-white mx-auto" style="max-width:600px;">
+                        Mentores con amplia experiencia liderando la transformación del talento en el sector farmacéutico
                     </p>
                 </div>
                 <div class="row justify-content-center g-4">
                     <!-- Angelica M. Santos R. -->
                     <div class="col-lg-3 col-md-6">
-                        <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
-                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);opacity:0;transition:opacity 0.4s ease;"></div>
+                        <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="">
+                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
                                 <div class="mb-3">
                                     <div class="mentor-photo-container position-relative d-inline-block">
-                                        <img src="/images/Mentora Angelica Santos .png" alt="Angelica M. Santos R." class="mentor-photo rounded-circle border border-primary border-opacity-20" style="width:100px;height:100px;object-fit:cover;transition:all 0.3s ease;">
-                                        <div class="photo-overlay position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(0,87,184,0.1);opacity:0;transition:opacity 0.3s ease;">
+                                        <img src="/images/Mentora Angelica Santos .png" alt="Angelica M. Santos R." class="mentor-photo rounded-circle border border-primary border-opacity-20" style="width:100px;height:100px;object-fit:cover;">
+                                        <div class=" position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(0,87,184,0.1);">
                                             
                                         </div>
                                     </div>
@@ -542,12 +542,12 @@
                     <!-- Natalia Vergara -->
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
-                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);opacity:0;transition:opacity 0.4s ease;"></div>
+                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
                                 <div class="mb-3">
                                     <div class="mentor-photo-container position-relative d-inline-block">
-                                        <img src="/images/mentora Natalia vergara.png" alt="Natalia Vergara" class="mentor-photo rounded-circle border border-success border-opacity-20" style="width:100px;height:100px;object-fit:cover;transition:all 0.3s ease;">
-                                        <div class="photo-overlay position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(0,168,107,0.1);opacity:0;transition:opacity 0.3s ease;">
+                                        <img src="/images/mentora Natalia vergara.png" alt="Natalia Vergara" class="mentor-photo rounded-circle border border-success border-opacity-20" style="width:100px;height:100px;object-fit:cover;">
+                                        <div class=" position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(0,168,107,0.1);">
                                             <i class="bi bi-brain text-success" style="font-size:1.5rem;"></i>
                                         </div>
                                     </div>
@@ -574,12 +574,12 @@
                     <!-- Otoniel Fonseca -->
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
-                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);opacity:0;transition:opacity 0.4s ease;"></div>
+                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);transition:opacity 0.4s ease;"></div>
                             <div class="position-relative z-1">
                                 <div class="mb-3">
                                     <div class="mentor-photo-container position-relative d-inline-block">
-                                        <img src="/images/mentor Otoniel Fonseca.png" alt="Otoniel Fonseca" class="mentor-photo rounded-circle border border-info border-opacity-20" style="width:100px;height:100px;object-fit:cover;transition:all 0.3s ease;">
-                                        <div class="photo-overlay position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(13,202,240,0.1);opacity:0;transition:opacity 0.3s ease;">
+                                        <img src="/images/mentor Otoniel Fonseca.png" alt="Otoniel Fonseca" class="mentor-photo rounded-circle border border-info border-opacity-20" style="width:100px;height:100px;object-fit:cover;">
+                                        <div class=" position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(13,202,240,0.1);">
                                             
                                         </div>
                                     </div>
@@ -605,11 +605,11 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center h-100 p-4 p-lg-4 rounded-4 position-relative overflow-hidden" style="background:rgba(255,255,255,0.95);backdrop-filter:blur(15px);border:1px solid rgba(0,87,184,0.1);box-shadow:0 8px 40px rgba(0,87,184,0.12);transition:all 0.4s ease;">
-                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style="background:rgba(248,249,250,0.5);opacity:0;transition:opacity 0.4s ease;"></div>
+                            <div class="team-bg position-absolute top-0 start-0 w-100 h-100" style=""></div>
                             <div class="position-relative z-1">
                                 <div class="mb-3">
                                     <div class="mentor-photo-container position-relative d-inline-block">
-                                        <img src="/images/mentora Carolina huertas.png" alt="Otoniel Fonseca" class="mentor-photo rounded-circle border border-info border-opacity-20" style="width:100px;height:100px;object-fit:cover;transition:all 0.3s ease;">
+                                        <img src="/images/mentora Carolina huertas.png" alt="Carolina Huertas" class="mentor-photo rounded-circle border border-info border-opacity-20" style="width:100px;height:100px;object-fit:cover;transition:all 0.3s ease;">
                                         <div class="photo-overlay position-absolute top-0 start-0 w-100 h-100 rounded-circle d-flex align-items-center justify-content-center" style="background:rgba(13,202,240,0.1);opacity:0;transition:opacity 0.3s ease;">
                                             
                                         </div>
@@ -717,7 +717,7 @@
                             <h2 class="h2 fw-bold mb-3 text-white" style="font-family:'Inter',sans-serif;letter-spacing:-0.8px;">
                                 Preguntas <span class="">Frecuentes</span>
                             </h2>
-                            <p class="lead text-white-50 mx-auto" style="max-width:600px;line-height:1.6;">
+                            <p class="lead text-white mx-auto" style="max-width:600px;line-height:1.6;">
                                 Resolvemos las dudas más comunes para que puedas comenzar tu formación sin inconvenientes
                             </p>
                         </div>
@@ -795,7 +795,7 @@
                             <h2 class="h2 fw-bold text-white mb-4" style="font-family:'Inter',sans-serif;">
                                 ¿Listo para impulsar tu carrera en farma y desarrollar tus power skills?
                             </h2>
-                            <p class="lead text-white-50 mb-4 mx-auto" style="max-width:600px;">
+                            <p class="lead text-white mb-4 mx-auto" style="max-width:600px;">
                                 Regístrate y accede a los mejores cursos online del sector farmacéutico.
                             </p>
                             
@@ -848,7 +848,7 @@
                         
                         <!-- Logos del patrocinio -->
                         <div class="mt-4 d-flex gap-3 align-items-center">
-                            <img src="/images/patrocinio-logo.png" alt="Patrocinio" class="img-fluid opacity-75" style="max-height:40px;max-width:120px;object-fit:contain;">
+                            <img src="/images/patrocinador-1.png" alt="Patrocinio" class="img-fluid opacity-75" style="max-height:60px;max-width:140px;object-fit:contain;">
                             <img src="/images/logo-authenticfarma-white.png" alt="Patrocinio 2" class="img-fluid opacity-75" style="max-height:80px;max-width:220px;object-fit:contain;">
                         </div>
                     </div>
@@ -943,6 +943,35 @@
         
         <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Manejar clic en botón "Acceder"
+            const btnAcceder = document.getElementById('btnAcceder');
+            if (btnAcceder) {
+                btnAcceder.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Mostrar toast informativo
+                    if (typeof Toastify !== 'undefined') {
+                        Toastify({
+                            text: "🚀 ¡La plataforma estará habilitada desde el 15 de octubre de 2025!",
+                            duration: 6000,
+                            close: true,
+                            gravity: "top",
+                            position: "right",
+                            backgroundColor: "#28a745",
+                            stopOnFocus: true,
+                            className: "toast-info-fixed",
+                            offset: {
+                                x: 20,
+                                y: 20
+                            }
+                        }).showToast();
+                    } else {
+                        // Fallback si Toastify no está disponible
+                        alert('La plataforma estará habilitada desde el 15 de octubre de 2025');
+                    }
+                });
+            }
+            
             const carousel = document.querySelector('#modulosCarousel');
             const carouselInner = carousel.querySelector('.carousel-inner');
             const allSlides = carousel.querySelectorAll('.carousel-item');
@@ -1146,6 +1175,28 @@
         <style>
             .toastify {
                 z-index: 99999 !important;
+                position: fixed !important;
+                box-shadow: 0 8px 32px rgba(0, 87, 184, 0.3) !important;
+                border-radius: 12px !important;
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+                padding: 16px 20px !important;
+                max-width: 400px !important;
+            }
+            
+            .toast-info-fixed {
+                animation: slideInRight 0.3s ease-out !important;
+            }
+            
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
             }
             
             /* Estilos personalizados para badges principales */
@@ -1225,13 +1276,17 @@
             <script>
                 Toastify({
                     text: "{{ session('success') }}",
-                    duration: 5000,
+                    duration: 6000,
                     close: true,
                     gravity: "top",
                     position: "right",
                     backgroundColor: "#28a745",
                     stopOnFocus: true,
-                    className: "toast-success"
+                    className: "toast-info-fixed",
+                    offset: {
+                        x: 20,
+                        y: 20
+                    }
                 }).showToast();
             </script>
         @endif

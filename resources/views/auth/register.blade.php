@@ -107,7 +107,7 @@
                                         </span>
                                         <input type="text" name="profesion" class="form-control border-start-0" 
                                                style="border-color: #e2e8f0; padding-left: 0;" 
-                                               placeholder="ej. Químico Farmacéutico, Estudiante de Farmacia" 
+                                               placeholder="ej. Químico Farmacéutico, ingeniería biomédica" 
                                                value="{{ old('profesion') }}" required>
                                     </div>
                                     @error('profesion')<div class="text-danger small mt-1"><i class="bi bi-exclamation-circle me-1"></i>{{ $message }}</div>@enderror
@@ -312,25 +312,34 @@
                             </div>
                         </div>
 
+                        <!-- Checkbox de términos y condiciones -->
+                        <div class="mb-4">
+                            <div class="form-check d-flex align-items-start">
+                                <input class="form-check-input me-3 mt-1" type="checkbox" name="acepta_terminos" id="acepta_terminos" value="1" {{ old('acepta_terminos') ? 'checked' : '' }} required style="border-radius: 6px; border: 2px solid #e2e8f0; width: 20px; height: 20px;">
+                                <label class="form-check-label text-secondary" for="acepta_terminos" style="font-size: 0.95rem; line-height: 1.5;">
+                                    He leído y acepto los 
+                                    <a href="{{ route('policies-data.index') }}" class="text-primary text-decoration-none fw-medium" target="_blank">términos y condiciones</a> 
+                                    y la 
+                                    <a href="{{ route('policies-data.index') }}" class="text-primary text-decoration-none fw-medium" target="_blank">política de privacidad</a> 
+                                    de Authentic E-learning *
+                                </label>
+                            </div>
+                            @error('acepta_terminos')<div class="text-danger small mt-2"><i class="bi bi-exclamation-circle me-1"></i>{{ $message }}</div>@enderror
+                        </div>
+
                         <!-- Botón de registro -->
                         <div class="d-grid gap-2 mb-4">
-                            <button type="submit" class="btn btn-pharma btn-lg py-3" style="border-radius: 12px; box-shadow: 0 8px 25px rgba(0, 87, 184, 0.2);">
+                            <button type="submit" id="btnRegistro" class="btn btn-pharma btn-lg py-3" style="border-radius: 12px; box-shadow: 0 8px 25px rgba(0, 87, 184, 0.2);" disabled>
                                 <i class="bi bi-person-check-fill me-2"></i>Crear mi cuenta
                             </button>
                         </div>
 
                         <!-- Links adicionales -->
                         <div class="text-center">
-                            <p class="text-muted small mb-3">
-                                Al registrarte, aceptas nuestros 
-                                <a href="{{ route('policies-data.index') }}" class="text-primary text-decoration-none" target="_blank">términos y condiciones</a> 
-                                y 
-                                <a href="{{ route('policies-data.index') }}" class="text-primary text-decoration-none" target="_blank">política de privacidad</a>
+                            <p class="text-secondary small mb-0">
+                                ¿Necesitas ayuda? 
+                                <a href="https://wa.me/573334002303" class="text-primary text-decoration-none fw-medium" target="_blank">Contáctanos por WhatsApp</a>
                             </p>
-                            {{-- <p class="text-secondary small">
-                                ¿Ya tienes una cuenta? 
-                                <a href="#" class="text-primary text-decoration-none fw-medium">Iniciar sesión</a>
-                            </p> --}}
                         </div>
                     </form>
                 </div>
@@ -370,8 +379,8 @@ document.addEventListener('DOMContentLoaded', function() {
         radios.forEach(radio => {
             const label = document.querySelector(`label[for="${radio.id}"]`);
             if (radio.checked) {
-                label.style.borderColor = '#0057b8';
-                label.style.backgroundColor = 'rgba(0, 87, 184, 0.05)';
+                label.style.borderColor = '#00a86b';
+                label.style.backgroundColor = 'rgba(0, 168, 107, 0.35)';
                 label.style.transform = 'scale(1.02)';
             } else {
                 label.style.borderColor = '#e2e8f0';
@@ -426,12 +435,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Manejar checkbox de términos y condiciones
+    const checkboxTerminos = document.getElementById('acepta_terminos');
+    const btnRegistro = document.getElementById('btnRegistro');
+    
+    function toggleRegistroButton() {
+        if (checkboxTerminos.checked) {
+            btnRegistro.disabled = false;
+            btnRegistro.style.cursor = 'pointer';
+        } else {
+            btnRegistro.disabled = true;
+            btnRegistro.style.cursor = 'not-allowed';
+        }
+    }
+    
+    checkboxTerminos.addEventListener('change', function() {
+        toggleRegistroButton();
+        // Estilo dinámico para el checkbox
+        if (this.checked) {
+            this.style.borderColor = '#00a86b';
+            this.style.backgroundColor = '#00a86b';
+        } else {
+            this.style.borderColor = '#e2e8f0';
+            this.style.backgroundColor = 'transparent';
+        }
+    });
+    
     // Inicializar estados
     toggleStudentFields();
     toggleCompanyFields();
     updateRadioStyles('estudia_actualmente');
     updateRadioStyles('trabaja_actualmente');
     updateRadioStyles('busca_pasantia');
+    toggleRegistroButton(); // Inicializar estado del botón
 });
 
 // Función para mostrar/ocultar contraseñas
@@ -482,13 +518,49 @@ function togglePassword(fieldId) {
 }
 
 .form-check-custom label:hover {
-    border-color: #0057b8 !important;
-    background-color: rgba(0, 87, 184, 0.02) !important;
+    border-color: #00a86b !important;
+    background-color: rgba(0, 168, 107, 0.18) !important;
 }
 
 .input-group:focus-within .input-group-text {
     border-color: #0057b8;
     background-color: rgba(0, 87, 184, 0.05);
+}
+
+/* Estilos para checkbox de términos y condiciones */
+.form-check-input {
+    transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+    background-color: #00a86b;
+    border-color: #00a86b;
+}
+
+.form-check-input:focus {
+    border-color: #00a86b;
+    box-shadow: 0 0 0 0.2rem rgba(0, 168, 107, 0.25);
+}
+
+.form-check-input:hover {
+    border-color: #00a86b;
+}
+
+/* Botón deshabilitado */
+.btn:disabled {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn:disabled:hover {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    transform: none !important;
+    box-shadow: none !important;
 }
 </style>
 

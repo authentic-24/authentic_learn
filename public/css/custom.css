@@ -13,10 +13,7 @@
 }
 
 #bg-particles {
-    position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    z-index: 1;
-    pointer-events: none;
+    display: none;
 }
 
 body > *:not(#bg-animated-gradient):not(#bg-particles) {
@@ -653,11 +650,11 @@ footer .text-success {
 }
 
 .team-card:hover .photo-overlay {
-    opacity: 1 !important;
+    /* opacity: 1 !important; */
 }
 
 .photo-overlay {
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px); */
 }
 
 /* Enhanced Photo Effects */
@@ -679,27 +676,10 @@ footer .text-success {
     opacity: 0.3;
 }
 
-/* Photo Loading Animation */
+/* Mentor photos - sin animaciones de entrada */
 .mentor-photo {
-    animation: photoFadeIn 0.8s ease forwards;
-    opacity: 0;
+    opacity: 1;
 }
-
-@keyframes photoFadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Stagger Animation for Photos */
-.team-card:nth-child(1) .mentor-photo { animation-delay: 0.2s; }
-.team-card:nth-child(2) .mentor-photo { animation-delay: 0.4s; }
-.team-card:nth-child(3) .mentor-photo { animation-delay: 0.6s; }
 
 /* Feature Cards con animaciones */
 .feature-card {

@@ -88,6 +88,6 @@ class RegisterController extends Controller
         }
 
         Mail::to($usuario->email)->send(new BienvenidaUsuario($usuario));
-        return redirect()->route('welcome')->with('success', '¡Registro exitoso! Te hemos enviado un email de bienvenida. Por favor revisa tu bandeja de entrada para validar tu cuenta.');
+        return redirect()->route('welcome')->with('success', '¡Registro exitoso! Te hemos enviado un email de bienvenida. En los próximos días recibirás más información para acceder a la plataforma.');
     }
 }
