@@ -268,18 +268,33 @@
                                     <h6 class="text-success mb-3">
                                         <i class="bi bi-building-fill me-2"></i>Información Laboral
                                     </h6>
-                                    <div class="mb-3">
-                                        <label class="form-label text-secondary small fw-medium">Nombre de la empresa</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text bg-light border-end-0" style="border-color: #e2e8f0;">
-                                                <i class="bi bi-building text-success"></i>
-                                            </span>
-                                            <input type="text" name="nombre_empresa" class="form-control border-start-0" 
-                                                   style="border-color: #e2e8f0; padding-left: 0;" 
-                                                   placeholder="ej. Laboratorio XYZ, Farmacia ABC" 
-                                                   value="{{ old('nombre_empresa') }}">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label class="form-label text-secondary small fw-medium">Nombre de la empresa</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-light border-end-0" style="border-color: #e2e8f0;">
+                                                    <i class="bi bi-building text-success"></i>
+                                                </span>
+                                                <input type="text" name="nombre_empresa" class="form-control border-start-0" 
+                                                       style="border-color: #e2e8f0; padding-left: 0;" 
+                                                       placeholder="ej. Laboratorio XYZ, Farmacia ABC" 
+                                                       value="{{ old('nombre_empresa') }}">
+                                            </div>
+                                            @error('nombre_empresa')<div class="text-danger small mt-1"><i class="bi bi-exclamation-circle me-1"></i>{{ $message }}</div>@enderror
                                         </div>
-                                        @error('nombre_empresa')<div class="text-danger small mt-1"><i class="bi bi-exclamation-circle me-1"></i>{{ $message }}</div>@enderror
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label class="form-label text-secondary small fw-medium">Cargo o posición</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-light border-end-0" style="border-color: #e2e8f0;">
+                                                    <i class="bi bi-person-badge text-success"></i>
+                                                </span>
+                                                <input type="text" name="cargo" class="form-control border-start-0" 
+                                                       style="border-color: #e2e8f0; padding-left: 0;" 
+                                                       placeholder="ej. Auxiliar de farmacia, Analista de laboratorio" 
+                                                       value="{{ old('cargo') }}">
+                                            </div>
+                                            @error('cargo')<div class="text-danger small mt-1"><i class="bi bi-exclamation-circle me-1"></i>{{ $message }}</div>@enderror
+                                        </div>
                                     </div>
                                 </div>
                             </div>

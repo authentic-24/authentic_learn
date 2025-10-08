@@ -21,6 +21,7 @@ class PerfilEstudiante extends Model
         'carrera',
         'trabaja_actualmente',
         'nombre_empresa',
+        'cargo',
         'busca_pasantia',
     ];
 

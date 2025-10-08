@@ -35,6 +35,7 @@ class RegisterController extends Controller
             'carrera' => 'nullable|string|max:100',
             'trabaja_actualmente' => 'nullable|in:0,1',
             'nombre_empresa' => 'nullable|string|max:255',
+            'cargo' => 'nullable|string|max:100',
             'busca_pasantia' => 'nullable|in:0,1',
         ], [
             'nombre.required' => 'El nombre es obligatorio.',
@@ -52,6 +53,7 @@ class RegisterController extends Controller
             'semestre.max' => 'El semestre no puede tener más de 50 caracteres.',
             'carrera.max' => 'La carrera no puede tener más de 100 caracteres.',
             'nombre_empresa.max' => 'El nombre de la empresa no puede tener más de 255 caracteres.',
+            'cargo.max' => 'El cargo no puede tener más de 100 caracteres.',
         ]);
 
         if ($validator->fails()) {
@@ -81,6 +83,7 @@ class RegisterController extends Controller
                 'carrera' => $request->carrera,
                 'trabaja_actualmente' => $request->trabaja_actualmente ? 1 : 0,
                 'nombre_empresa' => $request->nombre_empresa,
+                'cargo' => $request->cargo,
                 'busca_pasantia' => $request->busca_pasantia ? 1 : 0,
             ]);
         } catch (\Exception $e) {

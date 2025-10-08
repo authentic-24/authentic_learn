@@ -51,11 +51,11 @@
             </div>
         </nav>
 
-        <header class="text-center position-relative" style="background-image: url('/images/fondo.png'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat; min-height: 120vh; width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden;">
+        <header class="text-center position-relative header-bg" style="background-image: url('/images/fondo.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; min-height: 100vh; width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden;">
             <!-- Overlay para mejorar legibilidad del texto -->
             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(1px);"></div>
             
-            <div class="position-relative d-flex align-items-center justify-content-center" style="z-index: 2; min-height: 120vh; padding: 80px 0;">
+            <div class="position-relative d-flex align-items-center justify-content-center header-content" style="z-index: 2; min-height: 100vh; padding: 60px 0;">
                 <div class="container py-5">
                     <div class="mb-4">
                         <span class="badge bg-primary bg-opacity-25 text-white rounded-pill fw-medium mb-3 badge-custom-large">
@@ -824,7 +824,7 @@
         <footer class="border-0 mt-5 pt-5 pb-4" style="background: #2d3748;">
             <div class="container">
                 <div class="row justify-content-between align-items-start">
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-5 mb-4">
                         <div class="fw-bold mb-3 text-white" style="font-family:'Inter',sans-serif;font-size:1.3rem;">
                             <i class="bi bi-capsule me-2 text-primary"></i>Authentic Farma
                         </div>
@@ -847,9 +847,11 @@
                         </div>
                         
                         <!-- Logos del patrocinio -->
-                        <div class="mt-4 d-flex gap-3 align-items-center">
-                            <img src="/images/patrocinador-1.png" alt="Patrocinio" class="img-fluid opacity-75" style="max-height:60px;max-width:140px;object-fit:contain;">
-                            <img src="/images/logo-authenticfarma-white.png" alt="Patrocinio 2" class="img-fluid opacity-75" style="max-height:80px;max-width:220px;object-fit:contain;">
+                        <div class="mt-4 d-flex gap-2 align-items-center">
+                            <img src="/images/patrocinador-1.png" alt="Patrocinio" class="img-fluid opacity-75" style="max-height:50px;max-width:120px;object-fit:contain;">
+                            <img src="/images/logo-authenticfarma-white.png" alt="Authentic Farma" class="img-fluid opacity-75" style="max-height:60px;max-width:150px;object-fit:contain;">
+                            <!-- Logo Clúster Farma+ CCB -->
+                            <img src="/images/cluster.png" alt="Clúster Farma+ CCB" class="img-fluid opacity-75" style="max-height:50px;max-width:140px;object-fit:contain;">
                         </div>
                     </div>
                     <div class="col-md-2 mb-4">
@@ -912,12 +914,30 @@
                                 +57 333 4002303
                             </a>
                         </div>
-                        <div class="text-white-50 small d-flex align-items-center">
+                        <div class="text-white-50 small mb-3 d-flex align-items-center">
                             <i class="bi bi-geo-alt me-2 text-primary"></i>
                             <span>Colombia</span>
                         </div>
+                        
+                        <!-- Información del líder Clúster Farma+ CCB -->
+                        <hr style="border-color:rgba(255,255,255,0.2); margin: 1rem 0 0.75rem 0;">
+                        <div class="mb-2">
+                            <div class="fw-semibold text-white small mb-1">
+                                <i class="bi bi-award me-2 text-primary"></i>Proyecto financiado por:
+                            </div>
+                            <div class="text-white-50 small mb-1">Clúster Farma+ CCB</div>
+                        </div>
+                        <div class="fw-semibold text-white small mb-1">Miguel Angel Bustos Uribe</div>
+                        <div class="text-white-50 small mb-2">Líder Iniciativa Cluster Farmacéutico</div>
+                        <div class="text-white-50 small d-flex align-items-center">
+                            <i class="bi bi-envelope me-2 text-primary"></i>
+                            <a href="mailto:Miguel.bustos@ccb.org.co" class="text-white-50 text-decoration-none hover-text-white" style="transition:color 0.3s ease;">
+                                Miguel.bustos@ccb.org.co
+                            </a>
+                        </div>
                     </div>
                 </div>
+
                 <hr class="my-4" style="border-color:rgba(255,255,255,0.2);">
                 <div class="row align-items-center">
                     <div class="col-md-6">
@@ -1196,6 +1216,46 @@
                 to {
                     transform: translateX(0);
                     opacity: 1;
+                }
+            }
+            
+            /* Estilos responsivos para header en móviles */
+            @media (max-width: 768px) {
+                .header-bg {
+                    background-size: cover !important;
+                    background-position: center top !important;
+                    min-height: 100vh !important;
+                    background-attachment: scroll !important;
+                }
+                
+                .header-content {
+                    min-height: 100vh !important;
+                    padding: 40px 15px !important;
+                }
+                
+                .display-5 {
+                    font-size: 2rem !important;
+                    line-height: 1.3 !important;
+                }
+                
+                .badge-custom-large {
+                    font-size: 0.9rem !important;
+                    padding: 10px 16px !important;
+                }
+            }
+            
+            @media (max-width: 576px) {
+                .header-bg {
+                    background-position: center center !important;
+                    min-height: 100vh !important;
+                }
+                
+                .header-content {
+                    padding: 30px 10px !important;
+                }
+                
+                .display-5 {
+                    font-size: 1.8rem !important;
                 }
             }
             
