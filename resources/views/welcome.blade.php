@@ -847,11 +847,15 @@
                         </div>
                         
                         <!-- Logos del patrocinio -->
-                        <div class="mt-4 d-flex gap-2 align-items-center justify-content-start flex-wrap">
-                            <img src="/images/patrocinador-1.png" alt="Patrocinio" class="img-fluid opacity-75 logo-responsive" style="max-height:50px;max-width:120px;object-fit:contain;">
-                            <img src="/images/logo-authenticfarma-white.png" alt="Authentic Farma" class="img-fluid opacity-75 logo-responsive" style="max-height:60px;max-width:150px;object-fit:contain;">
-                            <!-- Logo Clúster Farma+ CCB -->
-                            <img src="/images/cluster.png" alt="Clúster Farma+ CCB" class="img-fluid opacity-75 logo-responsive" style="max-height:50px;max-width:140px;object-fit:contain;">
+                        <div class="mt-4">
+                            <div class="text-white-50 small mb-2 fw-medium">
+                                <i class="bi bi-award me-2 text-primary"></i>Patrocinado por CCB
+                            </div>
+                            <div class="d-flex gap-2 align-items-center justify-content-start flex-wrap">
+                                <img src="/images/patrocinador-1.png" alt="Patrocinio CCB" class="img-fluid opacity-75 logo-responsive" style="max-height:50px;max-width:120px;object-fit:contain;">
+                                <!-- Logo Clúster Farma+ CCB -->
+                                <img src="/images/cluster.png" alt="Clúster Farma+ CCB" class="img-fluid opacity-75 logo-responsive" style="max-height:50px;max-width:140px;object-fit:contain;">
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-2 mb-4">
@@ -921,14 +925,14 @@
                         
                         <!-- Información del líder Clúster Farma+ CCB -->
                         <hr style="border-color:rgba(255,255,255,0.2); margin: 1rem 0 0.75rem 0;">
-                        <div class="mb-2">
+                        {{-- <div class="mb-2">
                             <div class="fw-semibold text-white small mb-1">
                                 <i class="bi bi-award me-2 text-primary"></i>Proyecto financiado por:
                             </div>
                             <div class="text-white-50 small mb-1">Clúster Farma+ CCB</div>
-                        </div>
-                        <div class="fw-semibold text-white small mb-1">Miguel Angel Bustos Uribe</div>
+                        </div> --}}
                         <div class="text-white-50 small mb-2">Líder Iniciativa Cluster Farmacéutico</div>
+                        <div class="fw-semibold text-white small mb-1">Miguel Angel Bustos Uribe</div>
                         <div class="text-white-50 small d-flex align-items-center">
                             <i class="bi bi-envelope me-2 text-primary"></i>
                             <a href="mailto:Miguel.bustos@ccb.org.co" class="text-white-50 text-decoration-none hover-text-white" style="transition:color 0.3s ease;">
