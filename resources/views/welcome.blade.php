@@ -847,11 +847,11 @@
                         </div>
                         
                         <!-- Logos del patrocinio -->
-                        <div class="mt-4 d-flex gap-2 align-items-center">
-                            <img src="/images/patrocinador-1.png" alt="Patrocinio" class="img-fluid opacity-75" style="max-height:50px;max-width:120px;object-fit:contain;">
-                            <img src="/images/logo-authenticfarma-white.png" alt="Authentic Farma" class="img-fluid opacity-75" style="max-height:60px;max-width:150px;object-fit:contain;">
+                        <div class="mt-4 d-flex gap-2 align-items-center justify-content-start flex-wrap">
+                            <img src="/images/patrocinador-1.png" alt="Patrocinio" class="img-fluid opacity-75 logo-responsive" style="max-height:50px;max-width:120px;object-fit:contain;">
+                            <img src="/images/logo-authenticfarma-white.png" alt="Authentic Farma" class="img-fluid opacity-75 logo-responsive" style="max-height:60px;max-width:150px;object-fit:contain;">
                             <!-- Logo Clúster Farma+ CCB -->
-                            <img src="/images/cluster.png" alt="Clúster Farma+ CCB" class="img-fluid opacity-75" style="max-height:50px;max-width:140px;object-fit:contain;">
+                            <img src="/images/cluster.png" alt="Clúster Farma+ CCB" class="img-fluid opacity-75 logo-responsive" style="max-height:50px;max-width:140px;object-fit:contain;">
                         </div>
                     </div>
                     <div class="col-md-2 mb-4">
@@ -1256,6 +1256,26 @@
                 
                 .display-5 {
                     font-size: 1.8rem !important;
+                }
+                
+                /* Logos responsivos para móviles */
+                .logo-responsive {
+                    max-height: 35px !important;
+                    max-width: 80px !important;
+                    flex-shrink: 1 !important;
+                }
+                
+                /* Contenedor de logos en móvil */
+                .d-flex.gap-2.align-items-center {
+                    gap: 0.5rem !important;
+                    justify-content: center !important;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .logo-responsive {
+                    max-height: 30px !important;
+                    max-width: 70px !important;
                 }
             }
             
