@@ -8,6 +8,7 @@ class MoodleService
 {
     public function createUser($user, $plainPassword)
     {
+        // 3️⃣ Crear usuario en Moodle
         $url = config('moodle.url') . '/webservice/rest/server.php';
         $token = config('moodle.token');
 
