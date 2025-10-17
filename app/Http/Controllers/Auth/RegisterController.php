@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\BienvenidaUsuario;
-use app\services\MoodleService;
+use App\Services\MoodleService;
 
 class RegisterController extends Controller
 {
