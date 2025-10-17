@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\BienvenidaUsuario;
+use App\Services\MoodleService;
 
 class RegisterController extends Controller
 {
@@ -18,7 +19,7 @@ class RegisterController extends Controller
         return view('auth.register');
     }
 
-    public function register(Request $request)
+    public function register(Request $request,  MoodleService $moodle)
     {
 
         $validator = Validator::make($request->all(), [
@@ -85,12 +86,21 @@ class RegisterController extends Controller
                 'nombre_empresa' => $request->nombre_empresa,
                 'cargo' => $request->cargo,
                 'busca_pasantia' => $request->busca_pasantia ? 1 : 0,
+                'password_temp' => $request->password,
             ]);
+
+            $result = $moodle->createUser($usuario, $request->password);
+
+            if (isset($result[0]['id'])) {
+                $moodleUserId = $result[0]['id'];
+                $moodle->assignStudentRole($moodleUserId);
+            }
+
+            Mail::to($usuario->email)->send(new BienvenidaUsuario($usuario));
+            return redirect()->route('welcome')->with('success', '¡Registro exitoso! Te hemos enviado un email de bienvenida. En los próximos días recibirás más información para acceder a la plataforma.');
         } catch (\Exception $e) {
+            \Log::error('Error en el registro o creación en Moodle', ['error' => $e->getMessage()]);
             return redirect()->back()->withInput()->with('error', 'Error en el registro: ' . $e->getMessage());
         }
-
-        Mail::to($usuario->email)->send(new BienvenidaUsuario($usuario));
-        return redirect()->route('welcome')->with('success', '¡Registro exitoso! Te hemos enviado un email de bienvenida. En los próximos días recibirás más información para acceder a la plataforma.');
     }
 }

@@ -976,7 +976,7 @@
                     // Mostrar toast informativo
                     if (typeof Toastify !== 'undefined') {
                         Toastify({
-                            text: "🚀 ¡La plataforma estará habilitada desde el 15 de octubre de 2025!",
+                            text: "🚀 ¡La plataforma estará habilitada desde el 19 de octubre de 2025!",
                             duration: 6000,
                             close: true,
                             gravity: "top",

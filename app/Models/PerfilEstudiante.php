@@ -23,6 +23,7 @@ class PerfilEstudiante extends Model
         'nombre_empresa',
         'cargo',
         'busca_pasantia',
+        'password_temp',
     ];
 
     public function usuario()
