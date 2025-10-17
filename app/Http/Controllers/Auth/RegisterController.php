@@ -21,7 +21,7 @@ class RegisterController extends Controller
 
     public function register(Request $request,  MoodleService $moodle)
     {
-
+        // Validación de los datos del formulario
         $validator = Validator::make($request->all(), [
             'nombre' => 'required|string|max:255',
             'apellido' => 'nullable|string|max:255',
