@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\BienvenidaDetallada;
 use App\Models\Usuario;
 use App\Models\PerfilEstudiante;
 use Illuminate\Http\Request;
@@ -96,8 +97,8 @@ class RegisterController extends Controller
                 $moodle->assignStudentRole($moodleUserId);
             }
 
-            Mail::to($usuario->email)->send(new BienvenidaUsuario($usuario));
-            return redirect()->route('welcome')->with('success', '¡Registro exitoso! Te hemos enviado un email de bienvenida. En los próximos días recibirás más información para acceder a la plataforma.');
+            Mail::to($usuario->email)->send(new BienvenidaDetallada($usuario));
+            return redirect()->route('welcome')->with('success', '¡Registro exitoso! Te hemos enviado un email de bienvenida.');
         } catch (\Exception $e) {
             \Log::error('Error en el registro o creación en Moodle', ['error' => $e->getMessage()]);
             return redirect()->back()->withInput()->with('error', 'Error en el registro: ' . $e->getMessage());

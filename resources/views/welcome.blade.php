@@ -34,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
                         <li class="nav-item">
-                            <a class="nav-link text-dark fw-medium position-relative" href="#" id="btnAcceder" style="font-size:0.95rem;">
+                            <a class="nav-link text-dark fw-medium position-relative" href="https://elearning.authenticfarma.com/" target="_blank"  style="font-size:0.95rem;">
                                 Acceder
                             </a>
                         </li>
