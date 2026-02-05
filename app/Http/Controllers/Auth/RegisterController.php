@@ -109,7 +109,7 @@ class RegisterController extends Controller
                 'input'   => $request->except(['password', 'password_confirmation']), // No logueamos claves por seguridad
                 'trace'   => $e->getTraceAsString()
             ]);
-
+            dd('FALLO CRÍTICO EN REGISTRO INNOVAPHARMA: ' . $e->getMessage());
             // Devolvemos al usuario con un mensaje amigable pero con el detalle técnico oculto
             return redirect()->back()
                 ->withInput()
