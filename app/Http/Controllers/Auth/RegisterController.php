@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Log;
 use App\Mail\BienvenidaUsuario;
 use App\Services\MoodleService;
 
@@ -99,9 +100,20 @@ class RegisterController extends Controller
 
             Mail::to($usuario->email)->send(new BienvenidaDetallada($usuario));
             return redirect()->route('welcome')->with('success', '¡Registro exitoso! Te hemos enviado un email de bienvenida.');
-        } catch (\Exception $e) {
-            \Log::error('Error en el registro o creación en Moodle', ['error' => $e->getMessage()]);
-            return redirect()->back()->withInput()->with('error', 'Error en el registro: ' . $e->getMessage());
+        } catch (\Throwable $e) { // Usamos Throwable para capturar tanto Errores como Excepciones
+            // Registro detallado para Google Cloud Logging
+            \Log::error('FALLO CRÍTICO EN REGISTRO INNOVAPHARMA', [
+                'mensaje' => $e->getMessage(),
+                'archivo' => $e->getFile(),
+                'linea'   => $e->getLine(),
+                'input'   => $request->except(['password', 'password_confirmation']), // No logueamos claves por seguridad
+                'trace'   => $e->getTraceAsString()
+            ]);
+
+            // Devolvemos al usuario con un mensaje amigable pero con el detalle técnico oculto
+            return redirect()->back()
+                ->withInput()
+                ->with('error', 'Lo sentimos, hubo un problema técnico: ' . $e->getMessage());
         }
     }
 }
