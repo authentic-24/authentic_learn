@@ -1,27 +1,19 @@
-# Etapa 1: Construir assets con Node (Compatible con Mix y Vite)
-FROM node:20-alpine AS build-frontend
+# Etapa 1: construir assets con Node
+FROM node:18 AS build-frontend
 WORKDIR /app
-
-# Copiamos package.json y los archivos de configuración de forma opcional.
-# Usar j[s] evita que Docker falle si alguno de los dos archivos no existe.
-COPY package*.json webpack.mix.j[s] vite.config.j[s] ./
+COPY package*.json vite.config.* ./
 RUN npm install
-
-COPY resources/ ./resources/
-
-# Ejecuta el script según corresponda (Mix usa 'production', Vite usa 'build')
-RUN npm run production || npm run build
+COPY . .
+RUN npm run build
 
 # Etapa 2: PHP + Apache
 FROM php:8.2-apache
 
-# Instalamos dependencias del sistema incluyendo libpq-dev para PostgreSQL
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
     libzip-dev \
-    libpq-dev \
     zip \
     unzip \
     git \
@@ -37,23 +29,19 @@ WORKDIR /var/www/html
 # Copiar proyecto PHP
 COPY . .
 
-# Copiar los assets construidos en la primera etapa.
-# Se copia toda la carpeta public para asegurar que pasen tanto 'mix' como 'build' (Vite)
-COPY --from=build-frontend /app/public ./public
+# Copiar build de Vite generado en la primera etapa
+COPY --from=build-frontend /app/public/build ./public/build
 
-# Instalar dependencias de Laravel sin librerías de desarrollo
+# Instalar dependencias de Laravel
 RUN composer install --no-dev --optimize-autoloader
 
-# Permisos correctos para Laravel
+# Permisos
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Configuración de Apache
+# Configuración Apache
 RUN a2enmod rewrite
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
-
-# Configuración dinámica del puerto (Ideal para Cloud Run / entornos cloud)
-ENV PORT=8080
 RUN sed -i 's/80/${PORT}/g' /etc/apache2/ports.conf /etc/apache2/sites-available/000-default.conf
 
 EXPOSE 8080
